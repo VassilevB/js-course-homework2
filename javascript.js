@@ -18,3 +18,23 @@ const IsCustomerPoor = (voterCardNumber >= POOR_VOTER_COEFFICIENT) && (voterCard
 const IsCustomerRich = voterCardNumber >= RICH_VOTER_COEFFICIENT;
 const IsCustomerNormal = (voterCardNumber >= NORMAL_VOTER_LOWER_COEFFICIENT) && (voterCardNumber <= NORMAL_VOTER_UPPER_COEFFICIENT);
 
+// Задача 2
+
+// След въвеждане на номера системата трябва да изведе съобщение в зависимост от типа на гласоподавателя. Съобщението можете да видите в таблицата.
+// Тип гласоподавател 	Окуражаващо съобщение
+// POOR 	Хайде по-бързо и да те няма
+// RICH 	Има за нас, има и за вас
+// NORMAL 	Радваме се, че нормални хора вече гласуват
+
+if (IsCustomerPoor) {
+    console.log(`Хайде бързо да те няма!`);
+}
+
+if (IsCustomerRich) {
+    console.log(`Има за нас, има и за вас.`);
+}
+
+if (IsCustomerNormal) {
+    console.log(`Радваме се, че нормални хора вече гласуват.`);
+}
+
